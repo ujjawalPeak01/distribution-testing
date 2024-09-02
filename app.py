@@ -20,7 +20,7 @@ class InferlessPythonModel:
         generated_txt = pipeline_output[0]["generated_text"]
         InferlessPythonModel.random_stop()
         tot = time.time() - start_time
-        print("Total Initialize Time: ", tot, flush=True)
+        print("Total Inference Time: ", tot, flush=True)
         return {"generated_text": generated_txt}
 
     def finalize(self,args):
