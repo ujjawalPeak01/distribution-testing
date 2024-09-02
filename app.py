@@ -10,13 +10,8 @@ class InferlessPythonModel:
         time.sleep(delay)
 
     def initialize(self):
-        start_time = time.time()
         self.generator = pipeline("text-generation", model="EleutherAI/gpt-neo-125M",device=0)
-        InferlessPythonModel.random_stop()
         print("This is Initialize Code", flush=True)
-        tot = time.time() - start_time
-        print("Total Initialize Time: ", tot, flush=True)
-
     
     def infer(self, inputs):
         start_time = time.time()
